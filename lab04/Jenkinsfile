@@ -7,14 +7,18 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 echo 'Preparing project...'
-                sh 'composer install --no-interaction --prefer-dist'
+                dir('lab04/php-project') {
+                    sh 'composer install --no-interaction --prefer-dist'
+                }
             }
         }
         
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                sh './vendor/bin/phpunit tests/'
+                dir('lab04/php-project') {
+                    sh './vendor/bin/phpunit'
+                }
             }
         }
     }
