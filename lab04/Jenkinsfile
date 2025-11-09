@@ -17,7 +17,7 @@ pipeline {
             steps {
                 echo 'Running tests...'
                 dir('lab04/php-project') {
-                    sh './vendor/bin/phpunit'
+                    sh 'php vendor/bin/phpunit'
                 }
             }
         }
