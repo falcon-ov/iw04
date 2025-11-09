@@ -343,6 +343,8 @@ RUN php --version && composer --version
 3. Наблюдал выполнение в разделе **Build History**
 4. Открыл **Console Output** для просмотра логов
 
+![img](/images/img_25.png)
+
 ### 4.5. Результаты выполнения
 
 Pipeline успешно выполнился:
